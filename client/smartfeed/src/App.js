@@ -10,7 +10,6 @@ import ExplorePage from './pages/ExplorePage';
 import YourFeed from './pages/YourFeed';
 import RegisterPage from './pages/RegisterPage';
 import { UserContextProvider } from './UserContext';
-import CreatePost from './pages/CreatePost';
 import PostPage from './pages/PostPage';
 import ChoosePref from './pages/ChoosePref';
 
