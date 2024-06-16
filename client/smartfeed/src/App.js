@@ -29,7 +29,6 @@ function App() {
           <Route path={'/yourfeed'} element={<YourFeed/>}></Route>
           <Route path={'/explore'} element={<ExplorePage/>}></Route>
 
-          <Route path={'/create'} element={<CreatePost/>}></Route>
           <Route path={'/post/:id'} element={<PostPage/>}></Route>
         </Route>
       </Routes>
