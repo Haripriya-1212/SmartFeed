@@ -1,9 +1,11 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { UserContext } from '../UserContext';
+import { Navigate } from 'react-router-dom';
 
 export default function Header() {
   // const [username, setUsername] = useState(null);
+  const [redirect, setRedirect] = useState(false);
   const {setUserInfo, userInfo} = useContext(UserContext);
 
   useEffect(() => {
@@ -22,6 +24,7 @@ export default function Header() {
       method: 'POST'
     });
     setUserInfo(null);
+    setRedirect(true);
   }
 
   const username = userInfo?.username;
