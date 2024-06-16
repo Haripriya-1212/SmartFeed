@@ -1,0 +1,151 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  color: #333;
+}
+
+main{
+  padding: 50px;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 800px;
+  /* max-width: 70%; */
+}
+
+header{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  align-items: center;
+}
+
+img{
+  max-width: 100%;
+}
+
+header a{
+  text-decoration: none;
+  color: inherit;
+}
+
+header a.logo{
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+header nav{
+  display: flex;
+  gap: 20px;
+}
+
+div.post{
+  margin-bottom: 40px;
+  display: grid;
+  grid-template-columns: 1fr;
+  /* grid-template-columns: 0.9fr 1.1fr; */
+  gap: 30px
+}
+
+@media screen and (min-width:700px){
+  div.post{
+    grid-template-columns: 0.9fr 1.1fr;
+
+  }
+}
+
+div.post div.text h2{
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+div.post div.text a{
+  text-decoration: none;
+  color: inherit;
+}
+
+div.post p.info{
+  margin: 5px 0;
+  font-size: 0.7rem;
+  color: #888;
+  font-weight:500;
+  display: flex;
+  gap: 5px;
+}
+
+div.post p.info a.source{
+  color: #333;
+  font-weight: bold;
+}
+
+div.post p.summary{
+  margin: 10px 0;
+  font-size: 0.9rem;
+  /* line-height: 1.2rem; */
+}
+
+
+form.login, form.register{
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+input{
+  display: block;
+  width: 100%;
+  margin-bottom: 5px;
+  padding: 5px 10px;
+  border: 1px solid #bbb;
+  border-radius: 2px;
+}
+
+button{
+  margin-top: 7px;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  border-radius: 2px;
+  /* display: block; */
+  padding: 5px 10px;
+}
+
+form.login h1, form.register h1{
+  text-align: center;
+}
+
+div.post-page div.post-img{
+  max-height: 250px;
+  overflow: hidden;
+  display: flex;
+} 
+
+div.post-page div.post-img img{
+  object-fit: cover;
+  object-position: center center;
+  width: 100%;
+}
+
+div.post-page a{
+  color: #333;
+  text-decoration: underline;
+}
+
+div.post-page h1{
+  margin-bottom: 10 px;
+}
+
+div.post-page p.post-info span.source{
+  font-weight: bold;
+  /* font-size: 0.9rem; */
+}
+
+div.post-page p.post-info{
+  font-size: 0.8rem;
+  color:#888;
+  margin: 0;
+}
+
+div.post-page div.content p{
+  line-height: 1.5rem;
+}
