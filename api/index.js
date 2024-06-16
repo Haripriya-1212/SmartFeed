@@ -136,7 +136,3 @@ app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
 });
 
-// haripriya01212
-// ZpFzFqtirSWpddLY
-
-// mongodb+srv://haripriya01212:ZpFzFqtirSWpddLY@blog.vezkvuc.mongodb.net/?retryWrites=true&w=majority&appName=blog
