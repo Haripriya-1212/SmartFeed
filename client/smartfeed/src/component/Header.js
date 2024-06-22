@@ -29,7 +29,12 @@ export default function Header() {
 
   const username = userInfo?.username;
 
+  // if(redirect){
+  //   return <Navigate to={'/'} />
+  // }
+
   return (
+
     <header>
         <Link to="/" className="logo">SmartFeed</Link>
         <nav>

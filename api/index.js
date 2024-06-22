@@ -68,7 +68,7 @@ app.post('/login', async (req, res) => {
     }
 });
 
-// to check for logged in and change header
+// to check for logged in and change header - getting profile details
 app.get('/profile', (req, res) => {
     // res.json(req.cookies);
     const {token} = req.cookies;
@@ -123,6 +123,7 @@ app.get('/post', async (req, res) => {
 
 })
 
+// particular article
 app.get('/post/:id', async (req, res) => {
     const {id} = req.params;
     const postDoc = await Post.findById(id);
