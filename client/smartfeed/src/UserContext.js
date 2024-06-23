@@ -10,3 +10,16 @@ export function UserContextProvider({children}){
         </UserContext.Provider>
     );
 }
+
+
+export const RegisterContext = createContext({});
+
+export function RegisterContextProvider({ children }) {
+    const [registerInfo, setRegisterInfo] = useState([]);
+
+    return (
+        <RegisterContext.Provider value={{ registerInfo, setRegisterInfo }}>
+            {children}
+        </RegisterContext.Provider>
+    );
+}

@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Navigate } from 'react-router-dom';
+import { RegisterContext } from '../UserContext';
 
 
 export default function RegisterPage() {
@@ -7,6 +8,7 @@ export default function RegisterPage() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [redirect, setRedirect] = useState(false);
+    const {setRegisterInfo} = useContext(RegisterContext);
 
     async function register(ev) {
         ev.preventDefault();
@@ -17,13 +19,19 @@ export default function RegisterPage() {
                 headers: { 'Content-Type': 'application/json' },
             });
 
+            
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
-
-            const data = await response.json();
-            console.log('Registration successful:', data);
-            setRedirect(true);
+            
+            if(response.ok){
+                const data = await response.json();
+                console.log('Registration successful:', data);
+                setRegisterInfo(data);
+                console.log('Saved registration data');
+                setRedirect(true);
+            }
+            
 
         } catch (error) {
             console.error('Failed to fetch:', error);

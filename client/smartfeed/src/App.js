@@ -9,13 +9,14 @@ import LoginPage from './pages/LoginPage';
 import ExplorePage from './pages/ExplorePage';
 import YourFeed from './pages/YourFeed';
 import RegisterPage from './pages/RegisterPage';
-import { UserContextProvider } from './UserContext';
+import { UserContextProvider, RegisterContextProvider } from './UserContext';
 import PostPage from './pages/PostPage';
 import ChoosePref from './pages/ChoosePref';
 
 function App() {
   return (
     <UserContextProvider>
+      <RegisterContextProvider>
       <Routes>
         <Route  path='/' element={<Layout/>}>
           <Route index element={<IndexPage/> }></Route>
@@ -31,6 +32,8 @@ function App() {
           <Route path={'/post/:id'} element={<PostPage/>}></Route>
         </Route>
       </Routes>
+        
+      </RegisterContextProvider>
     </UserContextProvider>
     
   );
