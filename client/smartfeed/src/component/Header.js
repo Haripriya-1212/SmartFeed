@@ -1,12 +1,13 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { UserContext } from '../UserContext';
+import { UserContext, RegisterContext } from '../UserContext';
 import { Navigate } from 'react-router-dom';
 
 export default function Header() {
   // const [username, setUsername] = useState(null);
   const [redirect, setRedirect] = useState(false);
   const {setUserInfo, userInfo} = useContext(UserContext);
+  const { registerInfo } = useContext(RegisterContext);
 
   useEffect(() => {
     fetch('http://localhost:4000/profile',{
@@ -28,6 +29,8 @@ export default function Header() {
   }
 
   const username = userInfo?.username;
+  const register = registerInfo?.username;
+
 
   // if(redirect){
   //   return <Navigate to={'/'} />

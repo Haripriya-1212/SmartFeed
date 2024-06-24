@@ -2,6 +2,7 @@ import React, {  useContext, useState } from 'react';
 import Chip from '@mui/material/Chip';
 import Stack from '@mui/material/Stack';
 import { RegisterContext } from '../UserContext';
+import { Navigate } from 'react-router-dom';
 
 const topicsList = [
     "Politics", "Business", "Science", "Technology", "Entertainment",
@@ -20,9 +21,9 @@ const topicsList = [
         // {id: 9, name : "Entertainment"} ];
 
 export default function ChoosePref() {
-  
+  const [redirect, setRedirect] = useState(false);
   const [selectedTopics, setSelectedTopics] = useState([]);
-  const { registerInfo } = useContext(RegisterContext);
+  const { registerInfo, setRegisterInfo } = useContext(RegisterContext);
 
     const [clicked, setClicked] = useState(topicsList.reduce((acc, topic) => {
         acc[topic] = false;
@@ -30,10 +31,6 @@ export default function ChoosePref() {
       }, {}));
 
     const handleClick = (topic) => {
-        // setClicked((prevState) => ({
-        //   ...prevState,
-        //   [topic]: !prevState[topic],
-        // }));
         setClicked((prevState) => ({
           ...prevState,
           [topic]: !prevState[topic],
@@ -68,6 +65,8 @@ export default function ChoosePref() {
             if(response.ok){
                 const data = await response.json();
                 console.log('Registration successful:', data);
+                // setRegisterInfo(null);
+                // setRedirect(true);
             }
             
 
@@ -75,6 +74,10 @@ export default function ChoosePref() {
             console.error('Failed to fetch:', error);
         }
 
+    }
+
+    if(redirect){
+      return <Navigate to={'/login'} />
     }
 
 
