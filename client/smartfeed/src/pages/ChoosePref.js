@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, {  useContext, useState } from 'react';
 import Chip from '@mui/material/Chip';
 import Stack from '@mui/material/Stack';
+import { RegisterContext } from '../UserContext';
 
 const topicsList = [
     "Politics", "Business", "Science", "Technology", "Entertainment",
@@ -19,7 +20,9 @@ const topicsList = [
         // {id: 9, name : "Entertainment"} ];
 
 export default function ChoosePref() {
+  
   const [selectedTopics, setSelectedTopics] = useState([]);
+  const { registerInfo } = useContext(RegisterContext);
 
     const [clicked, setClicked] = useState(topicsList.reduce((acc, topic) => {
         acc[topic] = false;
@@ -45,8 +48,33 @@ export default function ChoosePref() {
         }
     };
 
-    function handleSubmit (){
+    async function handleSubmit (ev){
+      ev.preventDefault();
       console.log("Selected Topics:", selectedTopics);
+      const registrationData = { ...registerInfo, selectedTopics };
+
+      try {
+            const response = await fetch('http://localhost:4000/register', {
+                method: 'POST',
+                body: JSON.stringify(registrationData),
+                headers: { 'Content-Type': 'application/json' },
+            });
+
+            
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            
+            if(response.ok){
+                const data = await response.json();
+                console.log('Registration successful:', data);
+            }
+            
+
+        } catch (error) {
+            console.error('Failed to fetch:', error);
+        }
+
     }
 
 

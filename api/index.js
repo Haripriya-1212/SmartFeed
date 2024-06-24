@@ -31,8 +31,8 @@ mongoose.connect('mongodb+srv://haripriya01212:w8HzKcbknJQYFmPL@smartfeeddb.qfgr
 // Register user
 app.post('/register', async (req, res) => {
     try {
-        const { username, email, password } = req.body;
-        const userDoc = await User.create({ username, email, password: bcrypt.hashSync(password, salt) });
+        const { username, email, password, selectedTopics } = req.body;
+        const userDoc = await User.create({ username, email, password: bcrypt.hashSync(password, salt), selectedTopics });
         res.json(userDoc);
     } catch (err) {
         res.status(500).json({ error: err });

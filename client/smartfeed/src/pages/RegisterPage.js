@@ -12,30 +12,35 @@ export default function RegisterPage() {
 
     async function register(ev) {
         ev.preventDefault();
-        try {
-            const response = await fetch('http://localhost:4000/register', {
-                method: 'POST',
-                body: JSON.stringify({ username, email, password }),
-                headers: { 'Content-Type': 'application/json' },
-            });
+        const registerData = { username, email, password };
+        setRegisterInfo(registerData);
+        console.log('Saved registration data');
+        setRedirect(true);
+
+        // try {
+        //     const response = await fetch('http://localhost:4000/register', {
+        //         method: 'POST',
+        //         body: JSON.stringify({ username, email, password }),
+        //         headers: { 'Content-Type': 'application/json' },
+        //     });
 
             
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
+        //     if (!response.ok) {
+        //         throw new Error(`HTTP error! status: ${response.status}`);
+        //     }
             
-            if(response.ok){
-                const data = await response.json();
-                console.log('Registration successful:', data);
-                setRegisterInfo(data);
-                console.log('Saved registration data');
-                setRedirect(true);
-            }
+        //     if(response.ok){
+        //         const data = await response.json();
+        //         console.log('Registration successful:', data);
+        //         setRegisterInfo(data);
+        //         console.log('Saved registration data');
+        //         setRedirect(true);
+        //     }
             
 
-        } catch (error) {
-            console.error('Failed to fetch:', error);
-        }
+        // } catch (error) {
+        //     console.error('Failed to fetch:', error);
+        // }
     }
 
     if(redirect){
