@@ -23,7 +23,7 @@ const topicsList = [
 export default function ChoosePref() {
   const [redirect, setRedirect] = useState(false);
   const [selectedTopics, setSelectedTopics] = useState([]);
-  const { registerInfo, setRegisterInfo } = useContext(RegisterContext);
+  const { registerInfo } = useContext(RegisterContext);
 
     const [clicked, setClicked] = useState(topicsList.reduce((acc, topic) => {
         acc[topic] = false;
@@ -31,6 +31,10 @@ export default function ChoosePref() {
       }, {}));
 
     const handleClick = (topic) => {
+        // setClicked((prevState) => ({
+        //   ...prevState,
+        //   [topic]: !prevState[topic],
+        // }));
         setClicked((prevState) => ({
           ...prevState,
           [topic]: !prevState[topic],
@@ -65,8 +69,7 @@ export default function ChoosePref() {
             if(response.ok){
                 const data = await response.json();
                 console.log('Registration successful:', data);
-                // setRegisterInfo(null);
-                // setRedirect(true);
+                setRedirect(true);
             }
             
 
