@@ -35,7 +35,6 @@ function App() {
 
             <Route path={"/post/:id"} element={<PostPage />}></Route>
           </Route>
-          <Route path={'/cardTry'} element={<Try/>}></Route>
 
           <Route path={'/post/:id'} element={<PostPage/>}></Route>
       </Routes>
