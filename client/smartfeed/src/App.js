@@ -12,30 +12,31 @@ import RegisterPage from './pages/RegisterPage';
 import { UserContextProvider, RegisterContextProvider } from './UserContext';
 import PostPage from './pages/PostPage';
 import ChoosePref from './pages/ChoosePref';
+import CardTry from './pages/CardTry';
 
 function App() {
   return (
     <UserContextProvider>
       <RegisterContextProvider>
-      <Routes>
-        <Route  path='/' element={<Layout/>}>
-          <Route index element={<IndexPage/> }></Route>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<IndexPage />}></Route>
 
-          <Route path={'/login'} element={<LoginPage/>}></Route>
+            <Route path={"/login"} element={<LoginPage />}></Route>
 
-          <Route path={'/register'} element={<RegisterPage/>}></Route>
-          <Route path={'/choose'} element={<ChoosePref/>}></Route>
+            <Route path={"/register"} element={<RegisterPage />}></Route>
+            <Route path={"/choose"} element={<ChoosePref />}></Route>
 
-          <Route path={'/yourfeed'} element={<YourFeed/>}></Route>
-          <Route path={'/explore'} element={<ExplorePage/>}></Route>
+            <Route path={"/yourfeed"} element={<YourFeed />}></Route>
+            <Route path={"/explore"} element={<ExplorePage />}></Route>
 
-          <Route path={'/post/:id'} element={<PostPage/>}></Route>
-        </Route>
-      </Routes>
-        
+            <Route path={"/cardTry"} element={<CardTry />}></Route>
+
+            <Route path={"/post/:id"} element={<PostPage />}></Route>
+          </Route>
+        </Routes>
       </RegisterContextProvider>
     </UserContextProvider>
-    
   );
 }
 

@@ -149,3 +149,57 @@ div.post-page p.post-info{
 div.post-page div.content p{
   line-height: 1.5rem;
 }
+
+.main-card {
+  background: white;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  height: 370px;
+  margin: 10px;
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+.main-card:hover{
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.3);
+}
+.img-card{
+  object-fit: cover;
+  object-position: center center;
+  width:100%;
+
+}
+.bookmark-icon{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color:crimson;
+  cursor: pointer;
+  display: none;
+  z-index: 10;
+}
+.main-card:hover .bookmark-icon{
+  display: block;
+}
+.title-card{
+  padding:10px;
+  margin-top: 3px;
+  padding-bottom: 0;
+  font-size: 15px;
+}
+.time-card{
+  font-size: 10px;
+  padding: 0 10px;
+  padding-top: 5px;
+  /* padding-bottom: 5px; */
+}
+.summary-card{
+  font-size: 12px;
+  padding: 0 10px;
+  padding-top: 5px;
+  overflow: hidden;
+  flex:1;
+}
+.display-card{
+  display: flex;
+}

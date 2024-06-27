@@ -2,6 +2,7 @@ import React, { useEffect, useState, useContext } from 'react';
 import Newspost from '../component/Newspost';
 import { UserContext } from '../UserContext';
 // import { response } from 'express';
+import './IndexPage.css';
 
 export default function IndexPage() {
 
@@ -21,14 +22,17 @@ export default function IndexPage() {
 
   
   return (
-    <div>
+    <div className="page-container">
       {username && (
         <>
-        <h1>Hi {username}!</h1>
+        <h1 className='welcome-message'>Hi {username}!</h1>
         </>
       )}
       {!username &&(
-        <h1>About Us</h1>
+        <>
+        <h1 className='about-us'>About Us</h1>
+        <p className='additional-text'>Blah Blah</p>
+        </>
       )}
     </div>
   );
