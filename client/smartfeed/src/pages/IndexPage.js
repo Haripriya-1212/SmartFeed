@@ -24,11 +24,8 @@ export default function IndexPage() {
     return <Navigate to={'/yourfeed'} />
   }
 
-  
-
-  
   return (
-    <div className='indexpage'>
+    <div>
       {!username &&(
         <h1>About Us</h1>
       )}
