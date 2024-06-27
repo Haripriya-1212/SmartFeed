@@ -10,7 +10,8 @@ main{
   padding: 50px;
   align-items: center;
   margin: 0 auto;
-  max-width: 800px;
+  max-width: 900px;
+  /* height: 100%; */
   /* max-width: 70%; */
 }
 

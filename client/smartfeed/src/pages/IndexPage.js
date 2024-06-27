@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useContext } from 'react';
 import Newspost from '../component/Newspost';
 import { UserContext } from '../UserContext';
+import { Navigate } from 'react-router-dom';
 // import { response } from 'express';
 
 export default function IndexPage() {
@@ -19,14 +20,15 @@ export default function IndexPage() {
 
   const username = userInfo?.username;
 
+  if(username != null){
+    return <Navigate to={'/yourfeed'} />
+  }
+
+  
+
   
   return (
-    <div>
-      {username && (
-        <>
-        <h1>Hi {username}!</h1>
-        </>
-      )}
+    <div className='indexpage'>
       {!username &&(
         <h1>About Us</h1>
       )}

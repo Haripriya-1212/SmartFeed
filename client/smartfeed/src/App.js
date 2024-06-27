@@ -12,6 +12,7 @@ import RegisterPage from './pages/RegisterPage';
 import { UserContextProvider, RegisterContextProvider } from './UserContext';
 import PostPage from './pages/PostPage';
 import ChoosePref from './pages/ChoosePref';
+import Try from './pages/Try';
 
 function App() {
   return (
@@ -28,6 +29,8 @@ function App() {
 
           <Route path={'/yourfeed'} element={<YourFeed/>}></Route>
           <Route path={'/explore'} element={<ExplorePage/>}></Route>
+
+          <Route path={'/cardTry'} element={<Try/>}></Route>
 
           <Route path={'/post/:id'} element={<PostPage/>}></Route>
         </Route>
