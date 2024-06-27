@@ -13,10 +13,14 @@ import { UserContextProvider, RegisterContextProvider } from './UserContext';
 import PostPage from './pages/PostPage';
 import ChoosePref from './pages/ChoosePref';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import CardTry from './pages/CardTry';
 =======
 import Try from './pages/Try';
 >>>>>>> 173cea014c9835cc188b7e37ca01307b9c73bedd
+=======
+
+>>>>>>> 1db5ea56bfa456f0daa84c6496ef30d517f42cbf
 
 function App() {
   return (
@@ -35,6 +39,7 @@ function App() {
             <Route path={"/explore"} element={<ExplorePage />}></Route>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             <Route path={"/cardTry"} element={<CardTry />}></Route>
 
             <Route path={"/post/:id"} element={<PostPage />}></Route>
@@ -42,6 +47,8 @@ function App() {
         </Routes>
 =======
           <Route path={'/cardTry'} element={<Try/>}></Route>
+=======
+>>>>>>> 1db5ea56bfa456f0daa84c6496ef30d517f42cbf
 
           <Route path={'/post/:id'} element={<PostPage/>}></Route>
         </Route>

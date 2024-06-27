@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, {useState} from 'react'
 import image from '../imgs/img2.png'
 import BookmarkIcon from "@mui/icons-material/Bookmark";
@@ -28,12 +27,4 @@ export default function Card() {
       </p>
     </div>
   );
-=======
-import React from 'react'
-
-export default function card() {
-  return (
-    <div>card</div>
-  )
->>>>>>> 173cea014c9835cc188b7e37ca01307b9c73bedd
 }

@@ -25,10 +25,8 @@ export default function IndexPage() {
     return <Navigate to={'/yourfeed'} />
   }
 
-  
-
-  
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <div className="page-container">
       {username && (
@@ -39,6 +37,9 @@ export default function IndexPage() {
 =======
     <div className='indexpage'>
 >>>>>>> 173cea014c9835cc188b7e37ca01307b9c73bedd
+=======
+    <div>
+>>>>>>> 1db5ea56bfa456f0daa84c6496ef30d517f42cbf
       {!username &&(
         <>
         <h1 className='about-us'>About Us</h1>
