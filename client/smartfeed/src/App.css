@@ -1,3 +1,5 @@
+@import url('./fonts.css');
+
 *{
   box-sizing: border-box;
 }
@@ -17,12 +19,18 @@ main{
   /* max-width: 70%; */
 }
 
-#root {
-  min-height: 100vh;
-  background-image: url('img3.jpg'); /* Set the background image */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+
+.logo {
+  font-family: 'MyCustomFont4', sans-serif;
+}
+
+.logo .feed{
+  font-family: 'MyCustomFont4', sans-serif;
+  color: #ca4a00;
+}
+
+.logo .smart{
+  font-family: 'MyCustomFont4', sans-serif;
 }
 
 /* HEADER */
@@ -32,18 +40,11 @@ header{
   margin-bottom: 50px;
   align-items: center;
   color: azure;
-  background-color: rgba(0, 0, 0, 0.7);
 }
 
-/* not working */
-header a.active {
-  color: #ca4a00; /* Change to desired color */
-  font-weight: bold; /* Example: Bold font for active link */
-  /* Add any other styles for the active link */
-}
 
 header nav a.active{
-  color:crimson;
+  color:#ca4a00;
   font-weight: bold;
 }
 
@@ -121,6 +122,7 @@ form.login, form.register{
 input{
   display: block;
   background-color: #333;
+  color: azure;
   width: 100%;
   margin-bottom: 5px;
   padding: 10px 10px;
@@ -138,10 +140,15 @@ button{
   border-radius: 5px;
   /* display: block; */
   padding: 10px 10px;
+  box-shadow: none;
 }
 
 form.login h1, form.register h1{
   text-align: center;
+}
+
+.login h1, .register h1, .choosePrefPage h2{
+  color: azure;
 }
 
 
@@ -281,7 +288,7 @@ div.main-card div.text a{
   display: flex;
 }
 
-.exploreContent{
+.exploreContent, div.yourfeed-page div.cards{
   display: flex;
   flex-wrap: wrap;
 }

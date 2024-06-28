@@ -3,7 +3,9 @@ import Newspost from '../component/Newspost';
 import { UserContext } from '../UserContext';
 import { Navigate } from 'react-router-dom';
 // import { response } from 'express';
-
+import ContentSection from '../component/ContentSection';
+import Benefits from './Benefits';
+import Footer from '../component/Footer';
 
 export default function IndexPage() {
 
@@ -36,10 +38,13 @@ export default function IndexPage() {
       {!username &&(
         <>
         <h1 className='about-us'>About Us</h1>
-        <p className='additional-text' >Welcome to SmartFeed! your personalized news feed recommender system designed to enhance your news consumption experience. Engage with news through interactive features, save articles for later, and enjoy a seamless experience across all your devices. </p>
-        <p className='additional-text'>Stay informed with SmartFeed, where news is made personal.</p>
+        <p >Welcome to SmartFeed! your personalized news feed recommender system designed to enhance your news consumption experience. Engage with news through interactive features, save articles for later, and enjoy a seamless experience across all your devices. </p>
+        <p>Stay informed with SmartFeed, where news is made personal.</p>
         </>
       )}
+      <ContentSection/>
+      <Benefits/>
+      <Footer/>
     </div>
   );
 }

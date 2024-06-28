@@ -40,7 +40,10 @@ export default function Header() {
   return (
 
     <header>
-        <Link to="/" className="logo">SmartFeed</Link>
+        <Link to="/" className="logo">
+        <span className='smart'>Smart</span>
+        <span className='feed'>Feed.</span>
+        </Link>
         <nav>
           {username && (
             <>
