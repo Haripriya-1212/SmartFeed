@@ -8,7 +8,9 @@ export default function CardTry() {
       <Card />
       <Card />
       <Card />
-      {/* <MinimalComponent/> */}
+      <Card />
+      <Card />
+      <Card />
     </div>
   );
 }
