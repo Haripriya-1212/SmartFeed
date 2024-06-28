@@ -23,11 +23,12 @@ html, body {
     font-size: 20px;
     color: #000000;
     margin-top: 20px;
+    color: white;
   }
   
   .additional-text {
     font-size: 18px;
-    color: #444;
+    color: white;
     margin: 20px;
   }
   

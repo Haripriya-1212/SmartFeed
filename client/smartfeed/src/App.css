@@ -32,6 +32,11 @@ header a.active {
   /* Add any other styles for the active link */
 }
 
+header nav a.active{
+  color:crimson;
+  font-weight: bold;
+}
+
 img{
   max-width: 100%;
 }
@@ -166,6 +171,7 @@ div.post-page p.post-info{
 div.post-page div.content p{
   line-height: 1.5rem;
 }
+
 
 
 /* CARD */
