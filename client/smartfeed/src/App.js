@@ -13,10 +13,17 @@ import { UserContextProvider, RegisterContextProvider } from './UserContext';
 import PostPage from './pages/PostPage';
 import ChoosePref from './pages/ChoosePref';
 import CardTry from './pages/CardTry';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+
+
+const theme = createTheme({
+  // Define your custom theme here
+});
 
 
 function App() {
   return (
+    <ThemeProvider theme={theme}>
     <UserContextProvider>
       <RegisterContextProvider>
         <Routes>
@@ -41,6 +48,7 @@ function App() {
         
       </RegisterContextProvider>
     </UserContextProvider>
+    </ThemeProvider>
   );
 }
 
