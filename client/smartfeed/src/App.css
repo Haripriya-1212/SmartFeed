@@ -19,6 +19,13 @@ main{
   /* max-width: 70%; */
 }
 
+#root {
+  min-height: 800px;  
+ width: 100%;  
+ background-image: url('../imgs/img3.jpg');
+ background-size: cover; 
+ background-repeat: no-repeat; 
+}  
 
 .logo {
   font-family: 'MyCustomFont4', sans-serif;

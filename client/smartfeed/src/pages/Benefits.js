@@ -1,6 +1,6 @@
 import React from 'react';
 import './Benefits.css';
-import truckImage from '/Users/maulisharma/Desktop/Minor Project smartfeed/SmartFeed/client/smartfeed/src/paper.jpeg'; // Adjust the path to your image
+import truckImage from '../imgs/paper.jpeg';
 
 const Benefits = () => {
   return (

@@ -38,8 +38,8 @@ export default function IndexPage() {
       {!username &&(
         <>
         <h1 className='about-us'>About Us</h1>
-        <p >Welcome to SmartFeed! your personalized news feed recommender system designed to enhance your news consumption experience. Engage with news through interactive features, save articles for later, and enjoy a seamless experience across all your devices. </p>
-        <p>Stay informed with SmartFeed, where news is made personal.</p>
+        <p className='additional-text'>Welcome to SmartFeed! your personalized news feed recommender system designed to enhance your news consumption experience. Engage with news through interactive features, save articles for later, and enjoy a seamless experience across all your devices. </p>
+        <p className='additional-text'>Stay informed with SmartFeed, where news is made personal.</p>
         </>
       )}
       <ContentSection/>
