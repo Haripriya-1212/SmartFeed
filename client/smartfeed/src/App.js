@@ -14,6 +14,7 @@ import PostPage from './pages/PostPage';
 import ChoosePref from './pages/ChoosePref';
 import CardTry from './pages/CardTry';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { useLocation } from 'react-router-dom';
 
 
 const theme = createTheme({
@@ -22,33 +23,46 @@ const theme = createTheme({
 
 
 function App() {
+  const location = useLocation();
+
+  const rootStyles = {
+    minHeight: '800px',
+    width: '100%',
+    backgroundSize: 'cover',
+    // Optionally, conditionally override styles based on location.pathname
+    ...(location.pathname === '/' || location.pathname === '/login' ? { backgroundImage: 'url("../imgs/img2.png")',} : {})
+  };
+
+
   return (
-    <ThemeProvider theme={theme}>
-    <UserContextProvider>
-      <RegisterContextProvider>
-        <Routes>
-          <Route path="/" element={<Layout />}>
-            <Route index element={<IndexPage />}></Route>
+    <div id="root" style={rootStyles}>
+      <ThemeProvider theme={theme}>
+      <UserContextProvider>
+        <RegisterContextProvider>
+          <Routes>
+            <Route path="/" element={<Layout />}>
+              <Route index element={<IndexPage />}></Route>
 
-            <Route path={"/login"} element={<LoginPage />}></Route>
+              <Route path={"/login"} element={<LoginPage />}></Route>
 
-            <Route path={"/register"} element={<RegisterPage />}></Route>
-            <Route path={"/choose"} element={<ChoosePref />}></Route>
+              <Route path={"/register"} element={<RegisterPage />}></Route>
+              <Route path={"/choose"} element={<ChoosePref />}></Route>
 
-            <Route path={"/yourfeed"} element={<YourFeed />}></Route>
-            <Route path={"/explore"} element={<ExplorePage />}></Route>
+              <Route path={"/yourfeed"} element={<YourFeed />}></Route>
+              <Route path={"/explore"} element={<ExplorePage />}></Route>
 
-            <Route path={"/cardTry"} element={<CardTry />}></Route>
+              <Route path={"/cardTry"} element={<CardTry />}></Route>
 
-            <Route path={"/post/:id"} element={<PostPage />}></Route>
-          </Route>
+              <Route path={"/post/:id"} element={<PostPage />}></Route>
+            </Route>
 
-          <Route path={'/post/:id'} element={<PostPage/>}></Route>
-      </Routes>
-        
-      </RegisterContextProvider>
-    </UserContextProvider>
-    </ThemeProvider>
+            <Route path={'/post/:id'} element={<PostPage/>}></Route>
+        </Routes>
+          
+        </RegisterContextProvider>
+      </UserContextProvider>
+      </ThemeProvider>
+    </div>
   );
 }
 

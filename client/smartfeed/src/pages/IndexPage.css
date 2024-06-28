@@ -5,13 +5,13 @@ html, body {
     padding: 0;
   }
   
- #root {
-     min-height: 100vh;  
+ /* #root {
+     min-height: 800px;  
     width: 100%;  
-    /* background-image: url("https://img.freepik.com/free-vector/global-earth-blue-technology-digital-background-design_1017-27075.jpg"); */
+    background-image: url("../imgs/img2.png");
     background-size: cover; 
-    background-repeat: no-repeat; 
-   } 
+    /* background-repeat: no-repeat;  */
+   /* }  */ 
   
   .welcome-message {
     font-size: 24px;

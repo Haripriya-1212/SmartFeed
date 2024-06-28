@@ -50,11 +50,11 @@ export default function Card({_id, title, summary, content, cover, source, creat
         {bookmarked ? <BookmarkIcon /> : <BookmarkBorderIcon />}
       </div>
       <div className="text">
-      <Link to={'/post/'+_id}>
-      <h3 className="title-card">{title}</h3>
-      </Link>
-      <p className="time-card"><date>{formatISO9075(createdAt)}</date></p>
-      <p className="summary-card">{summary} </p>
+        <Link to={'/post/'+_id}>
+        <h3 className="title-card">{title}</h3>
+        </Link>
+        <p className="time-card"><date>{formatISO9075(createdAt)}</date></p>
+        <p className="summary-card">{summary} </p>
       </div>
     </div>
   );

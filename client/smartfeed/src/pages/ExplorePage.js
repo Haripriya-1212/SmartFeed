@@ -19,6 +19,8 @@ export default function ExplorePage() {
     <div className='exploreContent'>
     {/* Displaying from mongo db */}
     {posts.length>0 && posts.map(post => (<Card {...post}/>))}
+    {posts.length>0 && posts.map(post => (<Card {...post}/>))}
+    {posts.length>0 && posts.map(post => (<Card {...post}/>))}
     
     {/* <Newspost/>
     <Newspost/>

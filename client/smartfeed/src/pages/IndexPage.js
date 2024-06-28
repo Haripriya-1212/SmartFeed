@@ -27,7 +27,7 @@ export default function IndexPage() {
   }
 
   return (
-    <div className="page-container">
+    <div className="index-page">
       {/* {username && (
         <>
         <h1 className='welcome-message'>Hi {username}!</h1>
@@ -36,7 +36,8 @@ export default function IndexPage() {
       {!username &&(
         <>
         <h1 className='about-us'>About Us</h1>
-        <p className='additional-text'>Blah Blah</p>
+        <p >Welcome to SmartFeed! your personalized news feed recommender system designed to enhance your news consumption experience. Engage with news through interactive features, save articles for later, and enjoy a seamless experience across all your devices. </p>
+        <p>Stay informed with SmartFeed, where news is made personal.</p>
         </>
       )}
     </div>

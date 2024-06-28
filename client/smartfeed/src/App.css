@@ -4,6 +4,7 @@
 
 body{
   color: #333;
+  background-color: #111;
 }
 
 main{
@@ -15,11 +16,20 @@ main{
   /* max-width: 70%; */
 }
 
+/* HEADER */
 header{
   display: flex;
   justify-content: space-between;
   margin-bottom: 50px;
   align-items: center;
+  color: azure;
+}
+
+/* not working */
+header a.active {
+  color: #ca4a00; /* Change to desired color */
+  font-weight: bold; /* Example: Bold font for active link */
+  /* Add any other styles for the active link */
 }
 
 img{
@@ -41,6 +51,7 @@ header nav{
   gap: 20px;
 }
 
+/* POST */
 div.post{
   margin-bottom: 40px;
   display: grid;
@@ -86,7 +97,7 @@ div.post p.summary{
   /* line-height: 1.2rem; */
 }
 
-
+/* FORMS */
 form.login, form.register{
   max-width: 400px;
   margin: 0 auto;
@@ -94,27 +105,32 @@ form.login, form.register{
 
 input{
   display: block;
+  background-color: #333;
   width: 100%;
   margin-bottom: 5px;
-  padding: 5px 10px;
-  border: 1px solid #bbb;
-  border-radius: 2px;
+  padding: 10px 10px;
+  /* border: px solid #bbb; */
+  
+  border-radius: 5px;
+  margin-bottom: 15px;
 }
 
 button{
   margin-top: 7px;
   width: 100%;
-  background-color: #333;
-  color: white;
-  border-radius: 2px;
+  background-color: azure;
+  color: #333;
+  border-radius: 5px;
   /* display: block; */
-  padding: 5px 10px;
+  padding: 10px 10px;
 }
 
 form.login h1, form.register h1{
   text-align: center;
 }
 
+
+/* POST PAGE */
 div.post-page div.post-img{
   max-height: 250px;
   overflow: hidden;
@@ -151,6 +167,8 @@ div.post-page div.content p{
   line-height: 1.5rem;
 }
 
+
+/* CARD */
 .display-card {
   display: flex;
   flex-wrap: wrap;
@@ -158,7 +176,7 @@ div.post-page div.content p{
 }
 
 .main-card {
-  background: white;
+  background: #111;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   width: 270px;
   height: 370px;
@@ -167,10 +185,10 @@ div.post-page div.content p{
   overflow: hidden;
   transition: box-shadow 0.3s ease;
   margin-bottom: 30px;
-  margin-left: 30px;
+  margin-left: 20px;
 }
 .main-card:hover{
-  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.3);
+  box-shadow: 8px 8px 16px 8px rgba(0, 0, 0, 0.5);
 }
 .img-card{
   object-fit: cover;
@@ -193,6 +211,7 @@ div.post-page div.content p{
 .title-card{
   padding:10px;
   margin-top: 3px;
+  margin-bottom: 2px;
   padding-bottom: 0;
   font-size: 15px;
 }
@@ -204,12 +223,16 @@ div.main-card div.text a{
 
 
 .time-card{
-  font-size: 10px;
+  font-size: 0.7rem;
+  margin: 0;
   padding: 0 10px;
   padding-top: 5px;
+  color: #ca4a00;
+  font-weight: 400;
   /* padding-bottom: 5px; */
 }
 .summary-card{
+  color: #888;
   font-size: 12px;
   padding: 0 10px;
   padding-top: 5px;
@@ -222,4 +245,10 @@ div.main-card div.text a{
 
 .exploreContent{
   display: flex;
+  flex-wrap: wrap;
+}
+
+div.main-card div.text{
+  /* padding: 5px; */
+  color: azure;
 }
