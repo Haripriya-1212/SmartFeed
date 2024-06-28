@@ -1,6 +1,7 @@
 import React from 'react'
 import { useEffect, useState } from 'react';
 import Newspost from '../component/Newspost';
+import Card from '../component/Card';
 
 export default function ExplorePage() {
   const [posts, setPosts] = useState([]);
@@ -15,13 +16,13 @@ export default function ExplorePage() {
       });
     }, [])
   return (
-    <>
+    <div className='exploreContent'>
     {/* Displaying from mongo db */}
-    {posts.length>0 && posts.map(post => (<Newspost {...post}/>))}
+    {posts.length>0 && posts.map(post => (<Card {...post}/>))}
     
     {/* <Newspost/>
     <Newspost/>
     <Newspost/> */}
-    </>
+    </div>
   );
 }
