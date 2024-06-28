@@ -3,7 +3,7 @@ import Newspost from '../component/Newspost';
 import { UserContext } from '../UserContext';
 import { Navigate } from 'react-router-dom';
 // import { response } from 'express';
-import './IndexPage.css';
+
 
 export default function IndexPage() {
 

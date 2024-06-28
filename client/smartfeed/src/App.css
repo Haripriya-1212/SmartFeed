@@ -12,8 +12,17 @@ main{
   align-items: center;
   margin: 0 auto;
   max-width: 1000px;
+  color: azure;
   /* height: 100%; */
   /* max-width: 70%; */
+}
+
+#root {
+  min-height: 100vh;
+  background-image: url('img3.jpg'); /* Set the background image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* HEADER */
@@ -23,6 +32,7 @@ header{
   margin-bottom: 50px;
   align-items: center;
   color: azure;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 /* not working */
@@ -172,6 +182,28 @@ div.post-page div.content p{
   line-height: 1.5rem;
 }
 
+/*Index page*/
+.index-page{
+  color: azure;
+}
+.welcome-message {
+  font-size: 24px;
+  color: #6b6b6b;
+  margin-top: 20px;
+}
+
+.index-page .about-us {
+  font-size: 20px;
+  color: #000000;
+  margin-top: 20px;
+  color: white;
+}
+
+.index-page .additional-text {
+  font-size: 18px;
+  color: white;
+  margin: 20px;
+}
 
 
 /* CARD */
