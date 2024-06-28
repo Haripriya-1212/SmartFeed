@@ -22,7 +22,7 @@ main{
 #root {
   min-height: 800px;  
  width: 100%;  
- background-image: url('../imgs/img3.jpg');
+ background-image: url('./imgs/img3.jpg');
  background-size: cover; 
  background-repeat: no-repeat; 
 }  
@@ -72,6 +72,21 @@ header a.logo{
 header nav{
   display: flex;
   gap: 20px;
+}
+
+header a.active {
+  color: #ca4a00; /* Change to desired color for active links */
+  font-weight: bold;
+}
+
+/* Example for inactive links */
+header a {
+  color: #fff;
+}
+
+header a.active {
+  color: crimson; /* Color for selected links */
+  font-weight: bold; /* Bold for active link */
 }
 
 /* POST */

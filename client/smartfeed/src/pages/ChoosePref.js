@@ -89,7 +89,7 @@ export default function ChoosePref() {
   }
 
   return (
-    <div className='choosePrefPage'>
+    <div className="choosePrefPage">
       <br></br>
       <h2>Choose Your Preferences</h2>
       <Stack
