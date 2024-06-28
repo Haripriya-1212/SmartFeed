@@ -35,9 +35,10 @@ export default function LoginPage() {
   }
   return (
     <form className='login' onSubmit={login}>
+      <br></br>
         <h1>Login</h1>
-        <input type='text' placeholder='username' value={username} onChange={ev => setUsername(ev.target.value)}/>
-        <input type='password' placeholder='password' value={password} onChange={ev => setPassword(ev.target.value)}/>
+        <input type='text' placeholder='Username' value={username} onChange={ev => setUsername(ev.target.value)}/>
+        <input type='password' placeholder='Password' value={password} onChange={ev => setPassword(ev.target.value)}/>
         <button type='submit'>Login</button>
     </form>
   )

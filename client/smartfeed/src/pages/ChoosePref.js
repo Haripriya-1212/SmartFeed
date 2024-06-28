@@ -85,7 +85,8 @@ export default function ChoosePref() {
 
 
   return (
-    <div>
+    <div className='choosePrefPage'>
+      <br></br>
       <h2>Choose Your Preferences</h2>
       <Stack className='chips' direction="row" style={{maxWidth: '600px', flexWrap: 'wrap', gap: 10}}>
         {topicsList.map((topic) => <Chip label={topic} variant={clicked[topic] ? 'filled' : 'outlined'} onClick={() => handleClick(topic)} />)}

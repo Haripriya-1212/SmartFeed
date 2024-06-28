@@ -1,0 +1,28 @@
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('./fonts/Apercu Pro Bold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+
+  @font-face {
+    font-family: 'MyCustomFont2';
+    src: url('./fonts/THEBOLDFONT.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'MyCustomFont3';
+    src: url('./fonts/TiltWarp.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'MyCustomFont4';
+    src: url('./fonts/Poppins-SemiBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
