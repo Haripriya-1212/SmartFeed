@@ -303,7 +303,7 @@ div.main-card div.text a{
   display: flex;
 }
 
-.exploreContent{
+.exploreContent, div.yourfeed-page div.cards{
   display: flex;
   flex-wrap: wrap;
 }
