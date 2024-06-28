@@ -22,13 +22,17 @@ export default function IndexPage() {
   const username = userInfo?.username;
 
 
+  if(username != null){
+    return <Navigate to={'/yourfeed'} />
+  }
+
   return (
     <div className="page-container">
-      {username && (
+      {/* {username && (
         <>
         <h1 className='welcome-message'>Hi {username}!</h1>
         </>
-      )}
+      )} */}
       {!username &&(
         <>
         <h1 className='about-us'>About Us</h1>
