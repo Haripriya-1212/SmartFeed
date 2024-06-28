@@ -67,6 +67,21 @@ header nav{
   gap: 20px;
 }
 
+header a.active {
+  color: #ca4a00; /* Change to desired color for active links */
+  font-weight: bold;
+}
+
+/* Example for inactive links */
+header a {
+  color: #fff;
+}
+
+header a.active {
+  color: crimson; /* Color for selected links */
+  font-weight: bold; /* Bold for active link */
+}
+
 /* POST */
 div.post{
   margin-bottom: 40px;

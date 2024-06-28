@@ -89,10 +89,23 @@ export default function ChoosePref() {
       <br></br>
       <h2>Choose Your Preferences</h2>
       <Stack className='chips' direction="row" style={{maxWidth: '600px', flexWrap: 'wrap', gap: 10}}>
-        {topicsList.map((topic) => <Chip label={topic} variant={clicked[topic] ? 'filled' : 'outlined'} onClick={() => handleClick(topic)} />)}
-        {/* <Chip label="Clickable" onClick={() => handleClick} /> */}
-        {/* <Chip label="Clickable" variant="outlined" onClick={handleClick}/> */}
-      </Stack><br></br>
+      {topicsList.map((topic) => (
+          <Chip
+            key={topic}
+            label={topic}
+            variant={clicked[topic] ? 'filled' : 'outlined'}
+            onClick={() => handleClick(topic)}
+            sx={{
+              color: 'white', // Set text color to white
+              backgroundColor: clicked[topic] ? 'primary.main' : 'grey.600',
+              '&.MuiChip-outlined': {
+                color: 'white', // Ensure outlined variant text color is white
+              },
+            }}
+          />
+        ))}
+      </Stack>
+      <br></br>
       <button onClick={handleSubmit}>Continue</button>
     </div>
   );

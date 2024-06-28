@@ -54,8 +54,8 @@ export default function Header() {
           )}
           {!username && (
             <>
-              <Link to="/login" >Login</Link>
-              <Link to="/register" >Register</Link>
+              <Link to="/login" className={isActive('/login') ? 'active' : ''} >Login</Link>
+              <Link to="/register"  className={isActive('/register') ? 'active' : ''} >Register</Link>
             </>
           )}
         </nav>
