@@ -102,6 +102,13 @@ export default function ChoosePref() {
             label={topic}
             variant={clicked[topic] ? "filled" : "outlined"}
             onClick={() => handleClick(topic)}
+            sx={{
+              color: "white",
+              borderColor: "white", // For outlined variant
+              "&.MuiChip-filled": {
+                backgroundColor: "rgba(255, 255, 255, 0.2)", // Customize background for filled variant
+              },
+            }}
           />
         ))}
         {/* <Chip label="Clickable" onClick={() => handleClick} /> */}
