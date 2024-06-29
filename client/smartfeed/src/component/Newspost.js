@@ -34,7 +34,8 @@ export default function Newspost({_id, title, summary, content, cover, source, c
           </Link>
           <p className="info">
             <a className="source">{source}</a> &nbsp;|
-            <date>{formatISO9075(createdAt)}</date>
+            {/* <date>{formatISO9075(createdAt)}</date> */}
+            {createdAt}
           </p>
           <p className="summary">{summary}</p>
         </div>

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import BookmarkIcon from "@mui/icons-material/Bookmark";
 import BookmarkBorderIcon from "@mui/icons-material/BookmarkBorder";
-import { formatISO9075 } from "date-fns";
+// import { formatISO9075 } from "date-fns";
 import { Link } from "react-router-dom";
 
 // export default function Card() {
@@ -52,7 +52,8 @@ export default function Card({_id, title, summary, content, cover, source, creat
           <h3 className="title-card">{title}</h3>
         </Link>
         <p className="time-card">
-          <date>{formatISO9075(createdAt)}</date>
+          {/* <date>{formatISO9075(createdAt)}</date> */}
+          {createdAt}
         </p>
         <p className="summary-card">{summary} </p>
       </div>

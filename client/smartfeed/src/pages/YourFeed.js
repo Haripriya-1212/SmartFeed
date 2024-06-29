@@ -19,10 +19,10 @@ export default function YourFeed() {
     {/* Displaying from mongo db */}
     {posts.length>0 && posts.map(post => (<Newspost {...post}/>))}
     <br/>
-    <h2>Wtever</h2><br/>
+    <h2>Top Stories</h2><br/>
     <div className='cards'>
       {posts.length>0 && posts.map(post => (<Card {...post}/>))}
-      {posts.length>0 && posts.map(post => (<Card {...post}/>))}
+      {/* {posts.length>0 && posts.map(post => (<Card {...post}/>))} */}
     </div>
     
     {/* <Newspost/>

@@ -6,10 +6,10 @@ const PostSchema = new Schema({
     summary: String,
     content : String,
     cover : String,
-    source : String
-}, {
-    timestamps: true,
-});
+    source : String,
+    category : String,
+    time : String
+}, {});
 
 const PostModel = model('Post',PostSchema);
 
