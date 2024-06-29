@@ -20,7 +20,7 @@ main{
 }
 
 #root {
-  min-height: 800px;  
+ height: 100%;  
  width: 100%;  
  background-image: url('./imgs/img3.jpg');
  background-size: cover; 
@@ -34,10 +34,12 @@ main{
 .logo .feed{
   font-family: 'MyCustomFont4', sans-serif;
   color: #ca4a00;
+  font-size: 30px;
 }
 
 .logo .smart{
   font-family: 'MyCustomFont4', sans-serif;
+  font-size: 30px;
 }
 
 /* HEADER */
@@ -222,16 +224,16 @@ div.post-page div.content p{
 }
 
 .index-page .about-us {
-  font-size: 20px;
-  color: #000000;
+  /* font-size: 20px; */
+color: '#ca4a00';
   margin-top: 20px;
-  color: white;
+
 }
 
 .index-page .additional-text {
   font-size: 18px;
   color: white;
-  margin: 20px;
+  /* margin: 20px; */
 }
 
 
