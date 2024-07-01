@@ -58,31 +58,27 @@ export default function ChoosePref() {
     }
   };
 
-  
   async function handleSubmit(ev) {
     ev.preventDefault();
-    
-    console.log("Register Info:", registerInfo);
     console.log("Selected Topics:", selectedTopics);
-    
     const registrationData = { ...registerInfo, selectedTopics };
-  
+
     try {
-      console.log("Sending registration data:", registrationData);
-      
       const response = await fetch("http://localhost:4000/register", {
         method: "POST",
         body: JSON.stringify(registrationData),
         headers: { "Content-Type": "application/json" },
       });
-  
+
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
-  
-      const data = await response.json();
-      console.log("Registration successful:", data);
-      setRedirect(true);
+
+      if (response.ok) {
+        const data = await response.json();
+        console.log("Registration successful:", data);
+        setRedirect(true);
+      }
     } catch (error) {
       console.error("Failed to fetch:", error);
     }

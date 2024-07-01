@@ -24,8 +24,7 @@ export default function PostPage() {
         <h1>{postInfo.title}</h1>
         <p className="post-info">
             <span className='source'>by {postInfo.source}</span>&nbsp;&nbsp; | &nbsp;&nbsp;
-            {/* <time>{formatISO9075(new Date(postInfo.createdAt))}</time> */}
-            <p>{postInfo.createdAt}</p>
+            <time>{formatISO9075(new Date(postInfo.createdAt))}</time>
           </p><br/>
         {/* <p>{postInfo.content}</p> */}
         <div className='content' dangerouslySetInnerHTML={{__html:postInfo.content}}/>
