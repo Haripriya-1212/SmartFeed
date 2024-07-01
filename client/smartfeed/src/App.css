@@ -13,7 +13,7 @@ main{
   padding: 50px;
   align-items: center;
   margin: 0 auto;
-  max-width: 1000px;
+  max-width: 1200px;
   color: azure;
   /* height: 100%; */
   /* max-width: 70%; */
@@ -178,7 +178,7 @@ form.login h1, form.register h1{
 
 /* POST PAGE */
 div.post-page div.post-img{
-  max-height: 250px;
+  max-height: 450px;
   overflow: hidden;
   display: flex;
 } 
@@ -312,7 +312,7 @@ div.main-card div.text a{
   display: flex;
 }
 
-.exploreContent, div.yourfeed-page div.cards{
+div.exploreContent div.cards, div.yourfeed-page div.cards{
   display: flex;
   flex-wrap: wrap;
 }
