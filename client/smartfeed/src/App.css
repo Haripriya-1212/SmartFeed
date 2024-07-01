@@ -2,18 +2,20 @@
 
 *{
   box-sizing: border-box;
+  font-style: normal;
 }
 
 body{
   color: #333;
   background-color: #111;
+  font-style: normal;
 }
 
 main{
   padding: 50px;
   align-items: center;
   margin: 0 auto;
-  max-width: 1000px;
+  max-width: 1200px;
   color: azure;
   /* height: 100%; */
   /* max-width: 70%; */
@@ -120,20 +122,21 @@ div.post div.text a{
 div.post p.info{
   margin: 5px 0;
   font-size: 0.7rem;
-  color: #888;
   font-weight:500;
+  color: #ca4a00;
   display: flex;
   gap: 5px;
 }
 
 div.post p.info a.source{
-  color: #333;
+  color: #ca4a00;
   font-weight: bold;
 }
 
 div.post p.summary{
   margin: 10px 0;
   font-size: 0.9rem;
+  color: #888;
   /* line-height: 1.2rem; */
 }
 
@@ -145,7 +148,7 @@ form.login, form.register{
 
 input{
   display: block;
-  background-color: #333;
+  background-color: #555;
   color: azure;
   width: 100%;
   margin-bottom: 5px;
@@ -249,7 +252,7 @@ color: '#ca4a00';
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   width: 270px;
   height: 370px;
-  margin: 10px;
+  /* margin: 10px; */
   position: relative;
   overflow: hidden;
   transition: box-shadow 0.3s ease;
@@ -312,7 +315,7 @@ div.main-card div.text a{
   display: flex;
 }
 
-.exploreContent, div.yourfeed-page div.cards{
+div.exploreContent div.cards, div.yourfeed-page div.cards{
   display: flex;
   flex-wrap: wrap;
 }
