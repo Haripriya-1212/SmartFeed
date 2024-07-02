@@ -96,92 +96,89 @@ export default function YourFeed() {
       });
     }, [])
 
+     // Define the categories to filter by
+  const categories = ['Science', 'Health', 'Technology'];
+
+  // Filter posts based on categories
+  const filteredPosts = posts.filter(post => categories.includes(post.category));
+
+
 
   return (
     <div className='yourfeed-page'>
-    {/* Displaying from mongo db */}
-    {/* {posts.length>0 && posts.map(post => (<Newspost {...post}/>))}
-    <br/>
-    <h2>Top Stories</h2><br/>
-    <div className='cards'>
-      {posts.length>0 && posts.map(post => (<Card {...post}/>))} */}
-      {/* {posts.length>0 && posts.map(post => (<Card {...post}/>))} */}
-    {/* </div> */}
-    
-    {/* <Newspost/>
-    <Newspost/>
-    <Newspost/> */}
-
-
-
-
-
-<Box sx={{ display: 'flex' }}>
-      <CssBaseline />
-      <Drawer variant="permanent" open={open}>
-        <DrawerHeader>
-          <IconButton onClick={handleDrawerOpen} sx={{ display: open ? 'none' : 'inline-flex' }}>
-            <MenuIcon />
-          </IconButton>
-          <IconButton onClick={handleDrawerClose} sx={{ display: open ? 'inline-flex' : 'none' }}>
-            {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
-          </IconButton>
-        </DrawerHeader>
-        <Divider />
-        <List>
-          {['Bookmarks'].map((text, index) => (
-            <ListItem key={text} disablePadding sx={{ display: 'block' }}>
-              <ListItemButton
-                sx={{
-                  minHeight: 48,
-                  justifyContent: open ? 'initial' : 'center',
-                  px: 2.5,
-                }}
-              >
-                <ListItemIcon
-                  sx={{
-                    minWidth: 0,
-                    mr: open ? 3 : 'auto',
-                    justifyContent: 'center',
-                  }}
-                >
-                  <BookmarkIcon />
-                  {/* {index % 2 === 0 ? <InboxIcon /> : <MailIcon />} */}
-                </ListItemIcon>
-                <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} />
-              </ListItemButton>
-            </ListItem>
-          ))}
-        </List>
-        <Divider />
-        <List>
-          {['Article1', 'Article2', 'Article3' ].map((text, index) => (
-            <ListItem key={text} disablePadding sx={{ display: 'block' }}>
-              <ListItemButton
-                sx={{
-                  minHeight: 48,
-                  justifyContent: open ? 'initial' : 'center',
-                  px: 2.5,
-                }}
-              >
-                
-                <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} />
-              </ListItemButton>
-            </ListItem>
-          ))}
-        </List>
-      </Drawer>
-      <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
-        <DrawerHeader />
-        {posts.length>0 && posts.map(post => (<Newspost {...post}/>))}
-        <br/>
-        <h2>Top Stories</h2><br/>
-        <div className='cards'>
-          {posts.length>0 && posts.map(post => (<Card {...post}/>))}
-          {/* {posts.length>0 && posts.map(post => (<Card {...post}/>))} */}
-        </div>
-      </Box>
-    </Box>
+      
+      <Box sx={{ display: 'flex' }}>
+            <CssBaseline />
+            <Drawer variant="permanent" open={open}>
+              <DrawerHeader>
+                <IconButton onClick={handleDrawerOpen} sx={{ display: open ? 'none' : 'inline-flex' }}>
+                  <MenuIcon />
+                </IconButton>
+                <IconButton onClick={handleDrawerClose} sx={{ display: open ? 'inline-flex' : 'none' }}>
+                  {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
+                </IconButton>
+              </DrawerHeader>
+              <Divider />
+              <List>
+                {['Bookmarks'].map((text, index) => (
+                  <ListItem key={text} disablePadding sx={{ display: 'block' }}>
+                    <ListItemButton
+                      sx={{
+                        minHeight: 48,
+                        justifyContent: open ? 'initial' : 'center',
+                        px: 2.5,
+                      }}
+                    >
+                      <ListItemIcon
+                        sx={{
+                          minWidth: 0,
+                          mr: open ? 3 : 'auto',
+                          justifyContent: 'center',
+                        }}
+                      >
+                        <BookmarkIcon />
+                        {/* {index % 2 === 0 ? <InboxIcon /> : <MailIcon />} */}
+                      </ListItemIcon>
+                      <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} />
+                    </ListItemButton>
+                  </ListItem>
+                ))}
+              </List>
+              <Divider />
+              <List>
+                {['Article1', 'Article2', 'Article3' ].map((text, index) => (
+                  <ListItem key={text} disablePadding sx={{ display: 'block' }}>
+                    <ListItemButton
+                      sx={{
+                        minHeight: 48,
+                        justifyContent: open ? 'initial' : 'center',
+                        px: 2.5,
+                      }}
+                    >
+                      
+                      <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} />
+                    </ListItemButton>
+                  </ListItem>
+                ))}
+              </List>
+            </Drawer>
+            <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
+              <DrawerHeader />
+              {/* {posts.length>0 && posts.map(post => (<Newspost {...post}/>))}
+              <br/>
+              <h2>Top Stories</h2><br/>
+              <div className='cards'>
+                {posts.length>0 && posts.map(post => (<Card {...post}/>))}
+                {/* {posts.length>0 && posts.map(post => (<Card {...post}/>))} */}
+              {/* </div> */} 
+              {filteredPosts.length > 0 && filteredPosts.map(post => (<Newspost key={post._id} {...post} />))}
+                <br />
+                <h2>Top Stories</h2><br />
+                <div className='cards'>
+                  {filteredPosts.length > 0 && filteredPosts.map(post => (<Card key={post._id} {...post} />))}
+                </div>
+            </Box>
+          </Box>
 
     </div>
   );

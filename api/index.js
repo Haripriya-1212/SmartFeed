@@ -83,36 +83,6 @@ app.post('/logout', (req, res) => {
     res.cookie('token', '').json('ok');
 })
 
-// create blogpost - add to db
-app.post('/post', upload.single('file'), async(req,res) => {
-    try {
-        const { originalname, path } = req.file;
-        const parts = originalname.split('.');
-        const ext = parts[parts.length - 1];
-        const newPath = path + '.' + ext;
-        fs.renameSync(path, newPath);
-
-        const {token} = req.cookies;
-        jwt.verify(token, secret, {}, async (err, info) => {
-            if(err) throw err;
-
-            const {title,summary,content} = req.body;
-        
-            const postDoc = await Post.create({
-            title,
-            summary,
-            content,
-            cover: newPath,
-            author: info.id,
-        })
-        res.json(postDoc);
-        });
-
-    } catch (err) {
-        console.error('File upload error:', err);
-        res.status(500).json({ error: err.message });
-    }
-})
 
 // display posts in IndexPage
 app.get('/post', async (req, res) => {
@@ -130,6 +100,20 @@ app.get('/post/:id', async (req, res) => {
     res.json(postDoc)
     // res.json({id})
 })
+
+
+
+app.get('/preferences', (req, res) => {
+    if (!req.user || !req.user.id) {
+      return res.status(400).send('User ID not found');
+    }
+  
+    const userId = req.user.id;
+    User.findById(userId, (err, user) => {
+      if (err) return res.status(500).send(err);
+      res.json(user.preferences);
+    });
+  });
 
 
 const port = 4000;

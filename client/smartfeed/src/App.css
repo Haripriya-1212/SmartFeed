@@ -119,20 +119,21 @@ div.post div.text a{
 
 div.post p.info{
   margin: 5px 0;
+  color:#ca4a00;
   font-size: 0.7rem;
-  color: #888;
   font-weight:500;
   display: flex;
   gap: 5px;
 }
 
 div.post p.info a.source{
-  color: #333;
+  color:#ca4a00;
   font-weight: bold;
 }
 
 div.post p.summary{
   margin: 10px 0;
+  color:#888;
   font-size: 0.9rem;
   /* line-height: 1.2rem; */
 }
@@ -205,7 +206,8 @@ div.post-page p.post-info span.source{
 
 div.post-page p.post-info{
   font-size: 0.8rem;
-  color:#888;
+  color:#ca4a00;
+  
   margin: 0;
 }
 
@@ -248,7 +250,7 @@ color: '#ca4a00';
   background: #111;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   width: 270px;
-  height: 370px;
+  height: 420px;
   margin: 10px;
   position: relative;
   overflow: hidden;

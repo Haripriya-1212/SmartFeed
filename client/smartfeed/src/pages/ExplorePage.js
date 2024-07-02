@@ -158,7 +158,7 @@ export default function YourFeed() {
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
         <DrawerHeader />
         <div className='cards'>
-        {posts.length>0 && posts.map(post => (<Card {...post}/>))}
+          {posts.length>0 && posts.map(post => (<Card {...post}/>))}
         </div>
       </Box>
     </Box>
